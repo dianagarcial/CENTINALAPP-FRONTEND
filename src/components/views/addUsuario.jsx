@@ -9,8 +9,8 @@ import { Select } from "../select"
 export const AddUsuario= ()=>{
 
     return(
-        <div className="Login">
-        <div className="conte-login">
+        <div className="contenido">
+        <div className="conte-general">
         <Header/>
         <h1>Añadir usuario</h1>
         <h2>En este formulario puedes crear un nuevo usuario</h2>

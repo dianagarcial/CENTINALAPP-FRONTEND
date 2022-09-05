@@ -1,8 +1,15 @@
-.conte-login{
-    
-    display:flex;
-    margin-bottom: 20%;
-    flex-direction: column;
-    
-   
+
+.Login {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    height: 100vh;
 }
+
+.conte-login {
+    display: flex;
+    /* margin-bottom: 20%; */
+    flex-direction: column;
+    height: max-content;
+}
+

@@ -10,8 +10,8 @@ import { TextArea } from "../textArea"
 export const AddUsuarioFicha= ()=>{
 
     return(
-        <div className="Login">
-        <div className="conte-login">
+        <div className="contenido">
+        <div className="conte-general">
         <Header/>
         <h1>Añadir usuario</h1>
         <h2>En este formulario puedes crear un nuevo usuario</h2>
@@ -19,7 +19,7 @@ export const AddUsuarioFicha= ()=>{
         <Select placeholder="Selecciona una opción" option="Numero 1"/>
         
         <h3>Ficha medica</h3>
-        <Input placeholder="Imagen" type="image" />
+        <Input placeholder="Imagen" type="file" />
         <h3>Fecha de nacimiento</h3>
         <Input placeholder="Imagen" type="date" />
         <h3>Numero celuar</h3>
