@@ -2,16 +2,35 @@
 import { Input } from "../input"
 import { Navbar } from "../navbar"
 import "../../styles/styles.css"
+import { Header } from "../header"
+import Button from '@mui/material/Button'
+import { useNavigate } from 'react-router-dom';
 export const Home= ()=>{
+    const navigate = useNavigate();
+    
+    function scout(e){ 
+        e.preventDefault();
+        navigate(`/addScout`)
+    }
+    function administrador(e){ 
+        e.preventDefault();
+        navigate(`/addAdministrador`)
+    }
+    function rama(e){ 
+        e.preventDefault();
+        navigate(`/addRama`)
+    }
 
     return(
-    <div className="Home">
-
+    <div className="contenido">
+     <div className="conte-general">
         <Navbar/>
-        <h1>hsushs</h1>
-        <Input placeholder="Escribe aqui"/>
-
+        <Header/>
+       
+        <Button variant="contained" color="primary" onClick={scout}>Crear nuevo administrador</Button>
+        <Button variant="contained" color="primary" onClick={administrador}>Crear nuevo aministrador</Button>
+        <Button variant="contained" color="primary" onClick={rama}>Crear nueva rama</Button>
         </div>
- 
+        </div>
     )
 }

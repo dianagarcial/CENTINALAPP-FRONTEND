@@ -1,11 +1,19 @@
 
 import { Input } from "../input"
+import { useNavigate } from 'react-router-dom';
+
 
 import Button from '@mui/material/Button'
 import "../../styles/styles.css"
 import "../../styles/login.css"
 import "../../styles/boton.css"
 export const Login= ()=>{
+    const navigate = useNavigate();
+    
+    function ingreso(e){ 
+        e.preventDefault();
+        navigate(`/`)
+    }
 
     return(
         <div className="Login">
@@ -17,7 +25,7 @@ export const Login= ()=>{
         <Input placeholder="example@mail.com" type="email"/>
         <h3>Contraseña</h3>
         <Input placeholder="Tu contraseña" type="password"/>
-        <Button variant="contained" color="primary">Ingresa</Button>
+        <Button variant="contained" color="primary" onClick={ingreso}>Ingresa</Button>
         </form>
         </div>
         </div>

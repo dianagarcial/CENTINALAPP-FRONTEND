@@ -12,7 +12,7 @@ export const AddUsuario= ()=>{
         <div className="contenido">
         <div className="conte-general">
         <Header/>
-        <h1>Añadir usuario</h1>
+        <h1>Añadir administrador</h1>
         <h2>En este formulario puedes crear un nuevo usuario</h2>
         <h3>Tipo</h3>
         <Select placeholder="Selecciona una opción" option="Numero 1"/>
