@@ -16,14 +16,14 @@ export const AddUsuario= ()=>{
         <h2>En este formulario puedes crear un nuevo usuario</h2>
         <h3>Tipo</h3>
         <Select placeholder="Selecciona una opción" option="Numero 1"/>
-        
         <h3>Nombre</h3>
         <Input placeholder="Nueva publicación" type="text"/>
         <h3>Apellido</h3>
         <Input placeholder="Nueva publicación" type="text"/>
         <h3>Correo electronico</h3>
         <Input placeholder="Nueva publicación" type="email"/>
-        
+        <h3>Asignar rama</h3>
+        <Select placeholder="Selecciona una opción" option="Numero 1"/>
         <Button variant="contained" color="primary">Crear</Button>
         <Button variant="outlined" color="primary">Cancelar</Button>
         

@@ -1,8 +1,8 @@
 
 import { Route, Routes, Navigate } from "react-router-dom"
-import { AddUsuario } from "../components/views/addUsuario"
-import { AddUsuarioFicha } from "../components/views/addUsuarioFicha"
-import { AddUsuarioRama } from "../components/views/addUsuarioRama"
+import { AddUsuario } from "../components/views/addUsuarioAdm"
+import { AddUsuarioFicha } from "../components/views/addUsuarioScout"
+import { AddRama } from "../components/views/addRama"
 import { Home } from "../components/views/home"
 import { Login } from "../components/views/login"
 export const AppRouter = () => {
@@ -14,7 +14,7 @@ export const AppRouter = () => {
                 <Route path="/" element={ <Home/> }/>
                 <Route path="/login" element={ <Login/> }/>
                 <Route path="/addAdministrador" element={ <AddUsuario/> }/>
-                <Route path="/addRama" element={ <AddUsuarioRama/> }/>
+                <Route path="/addRama" element={ <AddRama/> }/>
                 <Route path="/addScout" element={ <AddUsuarioFicha/>}/>
         </Routes>
   )

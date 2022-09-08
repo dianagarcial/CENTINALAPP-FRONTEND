@@ -27,7 +27,7 @@ export const Home= ()=>{
         <Navbar/>
         <Header/>
        
-        <Button variant="contained" color="primary" onClick={scout}>Crear nuevo administrador</Button>
+        <Button variant="contained" color="primary" onClick={scout}>Crear nuevo scout</Button>
         <Button variant="contained" color="primary" onClick={administrador}>Crear nuevo aministrador</Button>
         <Button variant="contained" color="primary" onClick={rama}>Crear nueva rama</Button>
         </div>
