@@ -7,12 +7,24 @@ import Button from '@mui/material/Button'
 import "../../styles/styles.css"
 import "../../styles/login.css"
 import "../../styles/boton.css"
+import { useSelector } from "react-redux";
+import { useAuthStore, useForm } from "../../hooks";
+
+const loginForm = {
+    email: '',
+    password: '',
+}
+
 export const Login= ()=>{
-    const navigate = useNavigate();
     
-    function ingreso(e){ 
-        e.preventDefault();
-        navigate(`/`)
+    const { errorMessage } = useSelector( state => state.auth);
+    const { email, password, onInputChange } = useForm(loginForm);
+    const { startLogin } = useAuthStore();    
+
+    const loginSubmit = (e) => {
+      e.preventDefault();
+      startLogin({ email, password});
+      //console.log({email, password});
     }
 
     return(
@@ -20,16 +32,14 @@ export const Login= ()=>{
         <div className="conte-login">
         <h1>Bienvenido de nuevo</h1>
         <h2>Ingresa a tu cuenta</h2>
-        <form>
+        <form onSubmit={loginSubmit}>
         <h3>Correo electronico</h3>
-        <Input placeholder="example@mail.com" type="email"/>
+        <Input name="email" value={ email } onChange={ onInputChange } placeholder="example@mail.com" type="email"/>
         <h3>Contraseña</h3>
-        <Input placeholder="Tu contraseña" type="password"/>
-        <Button variant="contained" color="primary" onClick={ingreso}>Ingresa</Button>
+        <Input name="password" value={ password } onChange={ onInputChange } placeholder="Tu contraseña" type="password"/>
+        <Button variant="contained" color="primary" type="submit">Ingresa</Button>
         </form>
         </div>
         </div>
-        
- 
     )
 }
